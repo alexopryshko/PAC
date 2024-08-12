@@ -1,10 +1,14 @@
 name: Encode and Commit File to Base64
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
   encode_and_commit:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"  # Skip if commit message contains [skip ci]
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +21,7 @@ jobs:
         ENCODED_FILE="pac.txt"
         
         # Encode the file to Base64 and save it to a new file
-        base64 -b 64 -i "$FILE_TO_ENCODE" -o "$ENCODED_FILE"
+        base64 "$FILE_TO_ENCODE" > "$ENCODED_FILE"
         
         # Print the encoded content (for logging purposes)
         cat "$ENCODED_FILE"
@@ -30,5 +34,5 @@ jobs:
     - name: Commit and push changes
       run: |
         git add "$ENCODED_FILE"
-        git commit -m "Encode $FILE_TO_ENCODE to Base64"
+        git commit -m "Encode $FILE_TO_ENCODE to Base64 [skip ci]"
         git push origin main
