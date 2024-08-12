@@ -46,6 +46,11 @@ cdninstagram.com
 ||whatsapp.com
 ||whatsapp.net
 ||linkedin.com
+||youtube.com
+||googlevideo.com
+
+!!-- Edu
+||coursera.org
 
 !!-- Articles
 ||medium.com
