@@ -74,6 +74,7 @@ cdninstagram.com
 ||terraform.io
 ||hashicorp.com
 ||jetbrains.com
+||digitalocean.com
 
 
 !---------------------EOF-----------------------
