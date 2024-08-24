@@ -75,6 +75,7 @@ cdninstagram.com
 ||hashicorp.com
 ||jetbrains.com
 ||digitalocean.com
+||getoutline.org
 
 
 !---------------------EOF-----------------------
