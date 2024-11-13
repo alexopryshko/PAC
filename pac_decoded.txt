@@ -76,6 +76,6 @@ cdninstagram.com
 ||jetbrains.com
 ||digitalocean.com
 ||getoutline.org
-
+||bitnami.com
 
 !---------------------EOF-----------------------
